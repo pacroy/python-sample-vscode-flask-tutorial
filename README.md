@@ -21,7 +21,7 @@ When you submit a pull request, a CLA-bot automatically determines whether you n
 * For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 * Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Running Instrcutions
+## Running Instructions
 
 Execute the following commands:
 
@@ -34,3 +34,12 @@ flask run
 ```
 
 The server will serve at http://127.0.0.1:5000/
+
+### Test
+
+Execute the following commands:
+
+```shell
+pip install pytest
+pytest test* --doctest-modules --junit-xml=junit/test-results.xml
+```
