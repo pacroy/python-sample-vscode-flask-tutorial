@@ -41,5 +41,5 @@ Execute the following commands:
 
 ```shell
 pip install pytest
-pytest test* --doctest-modules --junit-xml=junit/test-results.xml
+pytest test* --junit-xml=test-results.xml
 ```
