@@ -29,11 +29,11 @@ Execute the following commands:
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
-export FLASK_APP=startup.py
-flask run
+pip install gunicorn
+gunicorn --bind=0.0.0.0 --workers=4 startup:app
 ```
 
-The server will serve at http://127.0.0.1:5000/
+The server will serve at http://127.0.0.1:8000/
 
 ### Test
 
@@ -41,5 +41,5 @@ Execute the following commands:
 
 ```shell
 pip install pytest
-pytest test* --junit-xml=test-results.xml
+pytest test*.py --junit-xml=test-results.xml
 ```
